@@ -6,3 +6,11 @@
   --dark-grayish-violet: hsl(279, 6%, 55%);
   --very-dark-violet: hsl(278, 68%, 11%);
 }
+
+@font-face {
+  font-family: "Space Grotesk", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: local("Space Grotesk"),
+    url(../../public/fonts/SpaceGrotesk-Medium.ttf) format("ttf");
+}
