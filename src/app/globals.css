@@ -6,3 +6,70 @@
   --dark-grayish-violet: hsl(279, 6%, 55%);
   --very-dark-violet: hsl(278, 68%, 11%);
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 375px;
+  font-size: 18px;
+}
+
+label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  color: var(--very-dark-violet);
+}
+
+p{
+  color: var(--light-grayish-violet);
+}
+
+input {
+  padding: 15px 16px 12px;
+  width: 100%;
+  border: 0.2px solid var(--light-grayish-violet);
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 18px 0;
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  background-color: var(--very-dark-violet);
+}
+
+button,
+input::placeholder {
+  font-size: 18px;
+}
+
+input::placeholder {
+  color: var(--dark-grayish-violet);
+}
+
+input:focus {
+  outline: none;
+  border: 0.3px solid transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.row50 {
+  width: 50%;
+}
+
+.errorMessage{
+  color: var(--input-errors);
+  font-size: x-small;
+  font-weight: bold;
+}
