@@ -27,31 +27,31 @@ export default function Home() {
 
               <div className={styles.containerCards__cardFront}>
                 {/* <div className={styles.containerCards__cardFront__content}> */}
-                  <div className={styles.containerCards__cardFront__circles}>
-                    <Image
-                        src="/images/card-logo.svg"
-                        alt="Card logo"
-                        width={58}
-                        height={32}
-                        priority
-                    />
-                  </div>
-                  <p className={styles.containerCards__cardFront__numbers}>
-                    9591648963891011
-                  </p>
-                  <div className={styles.containerCards__cardFront__data}>
-                    <p id='name'>FELICIA LEIRE</p>
-                    <p id='date'>09/26</p>
-                  </div>
+                <div className={styles.containerCards__cardFront__circles}>
+                  <Image
+                    src="/images/card-logo.svg"
+                    alt="Card logo"
+                    width={58}
+                    height={32}
+                    priority
+                  />
+                </div>
+                <p className={styles.containerCards__cardFront__numbers}>
+                  0000   0000   0000   0000
+                </p>
+                <div className={styles.containerCards__cardFront__data}>
+                  <p id='name'>FELICIA LEIRE</p>
+                  <p id='date'>09/26</p>
+                </div>
                 {/* </div> */}
               </div>
-              
+
             </div>
-           
+
           </div>
 
         </div>
-        
+
       </div>
 
       <div className={styles.containerForm}>
@@ -74,17 +74,17 @@ export default function Home() {
             <div className={`${styles.inputGroup}  ${styles.inputGroup__gap12}`}>
               <div className={`row50 ${styles.inputGroup}  ${styles.inputGroup__gap9}`}>
                 <div className={styles.formInput}>
-                  <input type="text" name="month" id="month" placeholder='MM' />
+                  <input type="text" maxLength={2} name="month" id="month" placeholder='MM' />
                   {/* <span className='errorMessage'>Can´t be blank</span> */}
                 </div>
                 <div className={styles.formInput}>
-                  <input type="text" name="year" id="year" placeholder='YY' />
+                  <input type="text" maxLength={2} name="year" id="year" placeholder='YY' />
                   {/* <span className='errorMessage'>Can´t be blank</span> */}
                 </div>
               </div>
               <div className="row50">
                 <div className={styles.formInput}>
-                  <input type="text" name="cvc" id="cvc" placeholder='e.g. 123' />
+                  <input type="text" maxLength={3} name="cvc" id="cvc" placeholder='e.g. 123' />
                   {/* <span className='errorMessage'>Can´t be blank</span> */}
                 </div>
               </div>
