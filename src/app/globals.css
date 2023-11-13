@@ -31,10 +31,11 @@ p{
 }
 
 input {
-  padding: 15px 16px 12px;
   width: 100%;
+  padding: 15px 16px 12px;
   border: 0.2px solid var(--light-grayish-violet);
   border-radius: 5px;
+  color: var(--very-dark-violet);
 }
 
 button {
@@ -46,6 +47,7 @@ button {
   background-color: var(--very-dark-violet);
 }
 
+input,
 button,
 input::placeholder {
   font-size: 18px;
@@ -73,3 +75,4 @@ input:focus {
   font-size: x-small;
   font-weight: bold;
 }
+
