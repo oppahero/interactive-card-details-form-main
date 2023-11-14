@@ -16,34 +16,19 @@ export default function Home() {
 
             <div className={styles.containerCards}>
 
-              <Image
-                className={styles.containerCards__cardBack}
-                src="/images/bg-card-back.png"
-                alt="Back of the card"
-                width={286}
-                height={158}
-                priority
-              />
+              <div className={styles.containerCards__cardBack}>
+                <span className={styles.containerCards__cardBack__cvc}>000</span>
+              </div>
 
               <div className={styles.containerCards__cardFront}>
-                {/* <div className={styles.containerCards__cardFront__content}> */}
-                <div className={styles.containerCards__cardFront__circles}>
-                  <Image
-                    src="/images/card-logo.svg"
-                    alt="Card logo"
-                    width={58}
-                    height={32}
-                    priority
-                  />
-                </div>
+                <div className={styles.containerCards__cardFront__circles}></div>
                 <p className={styles.containerCards__cardFront__numbers}>
                   0000   0000   0000   0000
                 </p>
                 <div className={styles.containerCards__cardFront__data}>
-                  <p id='name'>FELICIA LEIRE</p>
+                  <p id='name'>Jane Appleseed</p>
                   <p id='date'>09/26</p>
                 </div>
-                {/* </div> */}
               </div>
 
             </div>
@@ -59,18 +44,18 @@ export default function Home() {
         <form className={styles.form}>
 
           <div className={styles.formInput}>
-            <label htmlFor="name">Cardholder name</label>
-            <input type="text" name="name" id="name" placeholder='e.g. Jane Appleseed' />
+            <label htmlFor="cardName">Cardholder name</label>
+            <input type="text" name="cardName" id="cardName" placeholder='e.g. Jane Appleseed'  autoComplete='off' />
             {/* <span className='errorMessage'>Can´t be blank</span> */}
           </div>
           <div className={styles.formInput}>
-            <label htmlFor="card-number">Card number</label>
-            <input type="text" name="card-number" id="card-number" placeholder='e.g. 1234 5678 9123 0000' />
+            <label htmlFor="cardNumber">Card number</label>
+            <input type="text" name="cardNumber" id="cardNumber" placeholder='e.g. 1234 5678 9123 0000' />
             {/* <span className='errorMessage'>Can´t be blank</span>
             <span className='errorMessage'>Wront format, numbers only</span> */}
           </div>
           <div className={styles.formInput}>
-            <label htmlFor="card-number">Exp. Date (MM/YY)  CVC</label>
+            <label  htmlFor="month">Exp. Date (MM/YY)  CVC</label>
             <div className={`${styles.inputGroup}  ${styles.inputGroup__gap12}`}>
               <div className={`row50 ${styles.inputGroup}  ${styles.inputGroup__gap9}`}>
                 <div className={styles.formInput}>

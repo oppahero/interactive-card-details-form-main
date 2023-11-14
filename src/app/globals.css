@@ -16,6 +16,7 @@
 body {
   min-width: 375px;
   font-size: 18px;
+  min-height: 100vh;
 }
 
 label {
@@ -26,8 +27,9 @@ label {
   color: var(--very-dark-violet);
 }
 
-p{
+p, span{
   color: var(--light-grayish-violet);
+  text-transform: uppercase;
 }
 
 input {

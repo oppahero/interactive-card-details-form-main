@@ -1,10 +1,4 @@
 .main {
-  /* max-width: 1185px; */
-
-  /* min-width: 343px; */
-  /* margin: 0 auto; */
-  /* min-height: 100vh; */
-
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -19,14 +13,13 @@
 
 .containerForm {
   grid-area: form;
-  height: 487px;
   display: flex;
   justify-content: center;
 }
 
 .form {
-  margin-top: 90px;
   width: 327px;
+  margin: 90px 0 45px;
 }
 
 .formInput {
@@ -49,43 +42,55 @@
 }
 
 .backgroundImg {
-  background-image: url("../../public/images/bg-main-mobile.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  /* width: 765px; */
-  /* min-width: 375px; */
-  height: 240px;
+  background: url("../../public/images/bg-main-mobile.png") center / contain
+    no-repeat;
 }
 
 .containerPadding {
   padding: 33px 16px 0;
-  height: 247px;
+  height: 240px;
 }
 
 .containerCards {
   position: relative;
   width: 333px;
-  margin: 0 auto;
   height: 247px;
+  margin: 0 auto;
+}
+
+.containerCards__cardBack,
+.containerCards__cardFront {
+  position: absolute;
+  width: 286px;
+  height: 158px;
 }
 
 .containerCards__cardBack {
-  position: absolute;
   right: 0;
+  background: url("../../public/images/bg-card-back.png") center / cover
+    no-repeat;
+}
+
+.containerCards__cardBack__cvc {
+  position: absolute;
+  left: 225px;
+  top: 70px;
+  display: block;
 }
 
 .containerCards__cardFront {
-  position: absolute;
   bottom: 0;
-  width: 286px;
-  height: 158px;
   padding: 17px 23px 21px 19px;
   border-radius: 7px;
-  background: center url("../../public/images/bg-card-front.png");
+  background: url("../../public/images/bg-card-front.png") center;
 }
 
 .containerCards__cardFront__circles {
+  width: 58px;
+  height: 32px;
   margin-bottom: 25px;
+  background: url("../../public/images/card-logo.svg") center / contain
+    no-repeat;
 }
 
 .containerCards__cardFront__numbers {
@@ -96,7 +101,11 @@
 .containerCards__cardFront__data {
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
+}
+
+.containerCards__cardBack__cvc,
+.containerCards__cardFront__data {
+  font-size: 10px;
   letter-spacing: 1px;
 }
 
@@ -170,55 +179,82 @@
   }
 
   .backgroundImg {
-    background-image: url("../../public/images/bg-main-desktop.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+    width: 480px;
     height: 100vh;
+    min-height: 900px;
+    background: url("../../public/images/bg-main-desktop.png") center / cover
+      no-repeat;
   }
 
   .containerForm {
-    height: 100vh;
+    padding-top: 30px;
+    align-items: center;
   }
 
   .form {
-    margin-top: 170px;
     width: 383px;
+    margin: 0;
   }
 
   .containerPadding {
+    max-height: 850px;
+    min-height: 900px;
     padding-right: 0;
-    height: 600px;
+    padding-bottom: 190px;
   }
 
-  .containerCards{
-    margin: 0;
+  .containerCards {
     width: 100%;
-    height: 580px;
+    height: 100%;
+    margin: 0;
+  }
+
+  .containerCards__cardBack,
+  .containerCards__cardFront {
+    width: 448px;
+    height: 246px;
+    border-radius: 7px;
+    box-shadow: 0 1px 6rem rgba(0, 0, 0, 0.2);
   }
 
   .containerCards__cardBack {
     bottom: 0;
+    left: 190px;
+  }
+
+  .containerCards__cardBack__cvc {
+    left: 370px;
+    top: 113px;
   }
 
   .containerCards__cardFront {
-    position: absolute;
-    bottom: 260px;
-    left: 100px;
-    width: 450px;
-    height: 248px;
+    bottom: 280px;
+    left: 110px;
     padding: 29px 34px 30px 32px;
-    border-radius: 20px;    
-    box-shadow: 0 5px 3rem rgba(0, 0, 0, 0.541);
-    background: center url("../../public/images/bg-card-front.png");
   }
 
   .containerCards__cardFront__circles {
+    width: 87px;
+    height: 50px;
     margin-bottom: 70px;
   }
 
   .containerCards__cardFront__numbers {
-    margin-bottom: 20px;
     font-size: 28px;
   }
 
+  .containerCards__cardBack__cvc,
+  .containerCards__cardFront__data {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .containerCards__cardBack {
+    left: 230px;
+  }
+
+  .containerCards__cardFront {
+    left: 150px;
+  }
 }
