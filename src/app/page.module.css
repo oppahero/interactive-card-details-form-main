@@ -94,6 +94,7 @@
 }
 
 .containerCards__cardFront__numbers {
+  height: 23px;
   margin-bottom: 20px;
   letter-spacing: 2px;
 }
@@ -108,63 +109,6 @@
   font-size: 10px;
   letter-spacing: 1px;
 }
-
-/* 
-.backgroundImg {
-  position: absolute;
-  background-image: url("../../public/images/bg-main-mobile.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 765px;
-  min-width: 375px;
-  height: 240px;
-}
-
-.containerCards {
-  position: absolute;
-  top: 33px;
-  left: 16px;
-  min-width: 333px;
-  height: 247px;
-}
-
-.containerCards__cardBack {
-  position: absolute;
-  right: 0;
-}
-
-.containerCards__cardFront {
-  position: absolute;
-  bottom: 0;
-}
-
-.containerCards__cardFront__content {
-  width: 286px;
-  height: 158px;
-  padding: 17px 23px 21px 19px;
-  border-radius: 7px;
-  background: center url("../../public/images/bg-card-front.png");
-}
-
-.containerCards__cardFront__content__circles {
-  margin-bottom: 25px;
-}
-
-.containerCards__cardFront__content__numbers {
-  margin-bottom: 20px;
-}
-
-.containerCards__cardFront__content__data {
-  display: flex;
-  justify-content: space-between;
-}
-
-.form{
-    padding-top: 330px;
-    width: 330px;
-    height: 337px;
-}
-*/
 
 @media screen and (min-width: 366px) {
   .backgroundImg {
@@ -236,11 +180,13 @@
   .containerCards__cardFront__circles {
     width: 87px;
     height: 50px;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
   }
 
   .containerCards__cardFront__numbers {
     font-size: 28px;
+    margin-bottom: 25px;
+    height: 36px;
   }
 
   .containerCards__cardBack__cvc,
