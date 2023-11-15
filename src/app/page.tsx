@@ -2,7 +2,9 @@
 
 import styles from "./page.module.css";
 import { useFormik } from "formik";
+import { useState } from "react";
 import * as Yup from "yup";
+
 
 const FormSchema = Yup.object({
   cardName: Yup.string()
@@ -41,6 +43,37 @@ export default function Home() {
     },
   });
 
+  const [cardValues, setCardValues] = useState({
+    cardName: "ane Appleseed",
+    cardNumber: "0000 0000 0000 0000",
+    month: "00",
+    year: "00",
+    cvc: "000",
+  });
+
+  const formatCardNumber = (cardNumber: string) => {
+    let inputValue = cardNumber.replace(/\s/g, "");
+    let format: any;
+
+    if (inputValue !== "")
+      format = inputValue.match(/.{1,4}/g)?.join(" ")
+
+    return format
+  }
+
+  function handleChange(evt: React.SyntheticEvent) {
+    let { name, value } = evt.target as HTMLInputElement;
+
+    if (name === 'cardNumber')
+      value = formatCardNumber(value)
+
+    const newValues = {
+      ...cardValues,
+      [name]: value,
+    };
+    setCardValues(newValues);
+  }
+
   return (
     <main className={styles.main} role="main">
       <div className={styles.containerImages}>
@@ -49,7 +82,7 @@ export default function Home() {
             <div className={styles.containerCards}>
               <div className={styles.containerCards__cardBack}>
                 <span className={styles.containerCards__cardBack__cvc}>
-                  000
+                  {cardValues.cvc}
                 </span>
               </div>
               <div className={styles.containerCards__cardFront}>
@@ -57,11 +90,11 @@ export default function Home() {
                   className={styles.containerCards__cardFront__circles}
                 ></div>
                 <p className={styles.containerCards__cardFront__numbers}>
-                  0000 0000 0000 0000
+                  {cardValues.cardNumber}
                 </p>
                 <div className={styles.containerCards__cardFront__data}>
-                  <p id="name">Jane Appleseed</p>
-                  <p id="date">09/26</p>
+                  <p id="name">{cardValues.cardName}</p>
+                  <p id="date">{cardValues.month}/{cardValues.year}</p>
                 </div>
               </div>
             </div>
@@ -78,8 +111,9 @@ export default function Home() {
               id="cardName"
               placeholder="e.g. Jane Appleseed"
               autoComplete="off"
+              onKeyUp={handleChange}
               {...getFieldProps("cardName")}
-              className={`${touched.cardName && errors.cardName && "error_input"}`}
+              className={`${touched.cardName && errors.cardName}`}
             />
             {touched.cardName && errors.cardName && (
               <span className="errorMessage">{errors.cardName}</span>
@@ -90,9 +124,12 @@ export default function Home() {
             <input
               type="text"
               id="cardNumber"
+              inputMode="numeric"
+              maxLength={16}
               placeholder="e.g. 1234 5678 9123 0000"
+              onKeyUp={handleChange}
               {...getFieldProps("cardNumber")}
-              className={`${touched.cardNumber && errors.cardNumber && "error_input"}`}
+              className={`${touched.cardNumber && errors.cardNumber}`}
             />
             {touched.cardNumber && errors.cardNumber && (
               <span className="errorMessage">{errors.cardNumber}</span>
@@ -110,8 +147,9 @@ export default function Home() {
                     maxLength={2}
                     id="month"
                     placeholder="MM"
+                    onKeyUp={handleChange}
                     {...getFieldProps("month")}
-                    className={`${touched.month && errors.month && "error_input"}`}
+                    className={`${touched.month && errors.month}`}
                   />
                   {touched.month && errors.month && (
                     <span className="errorMessage">{errors.month}</span>
@@ -123,8 +161,9 @@ export default function Home() {
                     maxLength={2}
                     id="year"
                     placeholder="YY"
+                    onKeyUp={handleChange}
                     {...getFieldProps("year")}
-                    className={`${touched.year && errors.year && "error_input"}`}
+                    className={`${touched.year && errors.year}`}
                   />
                   {touched.year && errors.year && (
                     <span className="errorMessage">{errors.year}</span>
@@ -138,8 +177,9 @@ export default function Home() {
                     maxLength={3}
                     id="cvc"
                     placeholder="e.g. 123"
+                    onKeyUp={handleChange}
                     {...getFieldProps("cvc")}
-                    className={`${touched.cvc && errors.cvc && "error_input"}`}
+                    className={`${touched.cvc && errors.cvc}`}
                   />
                   {touched.cvc && errors.cvc && (
                     <span className="errorMessage">{errors.cvc}</span>
