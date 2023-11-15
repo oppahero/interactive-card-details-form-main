@@ -27,8 +27,12 @@ label {
   color: var(--very-dark-violet);
 }
 
-p, span{
+p,
+span {
   color: var(--light-grayish-violet);
+}
+
+p {
   text-transform: uppercase;
 }
 
@@ -72,9 +76,8 @@ input:focus {
   width: 50%;
 }
 
-.errorMessage{
+.errorMessage {
   color: var(--input-errors);
   font-size: x-small;
   font-weight: bold;
 }
-
