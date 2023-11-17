@@ -106,7 +106,7 @@ export default function Home() {
       </div>
 
       <div className={styles.containerForm}>
-        {!submit
+        {submit
           ? <div className={styles.containerMessage}>
             <Image
               className={styles.iconComplete}
