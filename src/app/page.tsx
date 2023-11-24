@@ -10,7 +10,7 @@ const FormSchema = Yup.object({
   cardName: Yup.string()
     .required("Can´t be blank"),
   cardNumber: Yup.string()
-    .matches(/[0-9]+/, "Wront format, numbers only")
+    .matches(/^[0-9\s]*$/, "Wront format, numbers only")
     .required("Can´t be blank")
     .min(19, "Min. 16 characters")
     .max(19, "Max. 16 characters"),
