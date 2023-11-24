@@ -10,13 +10,17 @@ const FormSchema = Yup.object({
   cardName: Yup.string()
     .required("Can´t be blank"),
   cardNumber: Yup.string()
-    .matches(/^[0-9]+$/, "Wront format, numbers only")
+    .matches(/[0-9]+/, "Wront format, numbers only")
     .required("Can´t be blank")
-    .min(16, "Min. 16 characters")
-    .max(16, "Max. 16 characters"),
+    .min(19, "Min. 16 characters")
+    .max(19, "Max. 16 characters"),
   month: Yup.string()
     .required("Can´t be blank")
-    .matches(/^[0-9]+$/, "Numbers only"),
+    .matches(/^[0-9]+$/, "Numbers only")
+    .test(
+      'month-range', 'Between 1-12', (value) => {
+        return parseInt(value) >= 1 && parseInt(value) <= 12
+      }),
   year: Yup.string()
     .required("Can´t be blank")
     .matches(/^[0-9]+$/, "Numbers only")
@@ -39,7 +43,7 @@ export default function Home() {
 
   const [submit, setSubmit] = useState(false)
 
-  const { handleSubmit, errors, touched, getFieldProps } = useFormik({
+  const { handleSubmit, errors, touched, getFieldProps, values } = useFormik({
     initialValues: {
       cardName: "",
       cardNumber: "",
@@ -67,8 +71,10 @@ export default function Home() {
   function handleChange(evt: React.SyntheticEvent) {
     let { name, value } = evt.target as HTMLInputElement;
 
-    if (name === 'cardNumber')
+    if (name === 'cardNumber') {
       value = formatCardNumber(value)
+      values.cardNumber = value
+    }
 
     const newValues = {
       ...cardValues,
@@ -141,7 +147,7 @@ export default function Home() {
                 type="text"
                 id="cardNumber"
                 inputMode="numeric"
-                maxLength={16}
+                maxLength={19}
                 placeholder="e.g. 1234 5678 9123 0000"
                 onKeyUp={handleChange}
                 {...getFieldProps("cardNumber")}
@@ -207,7 +213,6 @@ export default function Home() {
             <button type="submit">Confirm</button>
           </form>
         }
-
       </div>
     </main>
   );
