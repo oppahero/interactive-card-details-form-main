@@ -75,13 +75,13 @@ This is my first time using the Nextjs framework so I am currently learning abou
 
 Also putting my react knowledge into practice.
 
--Page routing
--Layout concept
--Module styles
--Nextjs image component
--UseState of react
--Formik
--Yup
+- Page routing
+- Layout concept
+- Module styles
+- Nextjs image component
+- UseState of react
+- Formik
+- Yup
 
 ### Continued development
 
