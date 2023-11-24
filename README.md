@@ -1,6 +1,6 @@
 # Frontend Mentor - Interactive card details form solution
 
-This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -30,15 +30,15 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots/Desktop-screen-form.png)
-![](./screenshots/Desktop-screen-form-error-messages.png)
-![](./screenshots/Desktop-screen-success.png)
-![](./screenshots/Mobile-screen-form.png)
-![](./screenshots/Mobile-screen-success.png)
+![](./public/screenshots/Desktop-screen-form.png)
+![](./public/screenshots/Desktop-screen-form-error-messages.png)
+![](./public/screenshots/Desktop-screen-success.png)
+![](./public/screenshots/Mobile-screen-form.png)
+![](./public/screenshots/Mobile-screen-success.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://github.com/oppahero/interactive-card-details-form-main](https://github.com/oppahero/interactive-card-details-form-main)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
@@ -89,7 +89,7 @@ In this practice I only have one page, but I want to try a project with a few di
 
 ### Useful resources
 
-- [Dynamic forms with formik](https://dev.to/franklin030601/formularios-dinamicos-con-formik-y-react-js-4hne) 
+- [Dynamic forms with formik](https://dev.to/franklin030601/formularios-dinamicos-con-formik-y-react-js-4hne)
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 
