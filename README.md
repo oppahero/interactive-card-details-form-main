@@ -30,8 +30,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
+![](./screenshots/Desktop-screen-form.png)
+![](./screenshots/Desktop-screen-form-error-messages.png)
+![](./screenshots/Desktop-screen-success.png)
+![](./screenshots/Mobile-screen-form.png)
+![](./screenshots/Mobile-screen-success.png)
 
 ### Links
 
