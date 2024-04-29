@@ -1,7 +1,6 @@
-# Frontend Mentor - Interactive card details form solution
+# Interactive card details form
 
-This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
-
+This is my solution to the Interactive card details form challenge on Frontend Mentor
 ## Table of contents
 
 - [Overview](#overview)
@@ -38,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/oppahero/interactive-card-details-form-main](https://github.com/oppahero/interactive-card-details-form-main)
-- Live Site URL: [https://interactive-card-details-form-main-sandy-theta.vercel.app/](https://interactive-card-details-form-main-sandy-theta.vercel.app/)
+- Solution URL: [Credit card form with inputs validation build with NextJS CSS Formik]([https://github.com/oppahero/interactive-card-details-form-main](https://www.frontendmentor.io/solutions/credit-card-form-with-inputs-validation-build-with-nextjs-css-formik-4wgA7SgNsT))
+- Live Site URL: [Site](https://interactive-card-details-form-main-sandy-theta.vercel.app/)
 
 ## My process
 
